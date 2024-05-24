@@ -1,12 +1,13 @@
+import React from "react";
 import "./App.css";
+import ThreadList from "./components/ThredList.jsx";
 
 function App() {
   return (
-    <>
-      <div>
-        <h1>Reactテスト</h1>
-      </div>
-    </>
+    <div className="container">
+      <h1>新着スレッド</h1>
+      <ThreadList />
+    </div>
   );
 }
 
