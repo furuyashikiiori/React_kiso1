@@ -1,19 +1,24 @@
 import React from "react";
 import "./App.css";
-import ThreadList from "./components/ThredList.jsx";
-import Header from "./components/Header.jsx";
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+import ThreadList from "./conponents/ThredList.jsx";
+import Header from "./conponents/Header.jsx";
 
 function App() {
   return (
-    <div className="container">
-      <header>
-        <Header />
-      </header>
-      <body>
-        <h1>新着スレッド</h1>
-        <ThreadList />
-      </body>
-    </div>
+    <BrowserRouter>
+      <div className="container">
+        <header>
+          <Header />
+        </header>
+        <body>
+          <Switch>
+            <h1>新着スレッド</h1>
+            <Route path="/" element={<ThreadList />} />
+          </Switch>
+        </body>
+      </div>
+    </BrowserRouter>
   );
 }
 
