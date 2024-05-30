@@ -43,12 +43,13 @@ nav ul li a:hover {
 
 .thread {
   /* スレッドのスタイル */
+  border-radius: 10px;
   border: 1px solid #ccc;
   margin-bottom: 30px;
   padding: 3px;
   width: 40%;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .thread-content {
