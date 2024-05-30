@@ -34,6 +34,7 @@ function ThreadList() {
 
   return (
     <div>
+      <h1>新着スレッド</h1>
       {threads.map((thread) => (
         <div key={thread.id} className="thread">
           <div className="thread-content">
@@ -45,7 +46,7 @@ function ThreadList() {
       {loading && <p>Loading...</p>}
       {hasMore && !loading && (
         <button className="Load_button" onClick={loadMore}>
-          Load More
+          さらに見る ↓
         </button>
       )}
     </div>
