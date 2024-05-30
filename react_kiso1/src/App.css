@@ -46,9 +46,9 @@ nav ul li a:hover {
   border: 1px solid #ccc;
   margin-bottom: 30px;
   padding: 3px;
-  width: 60%;
+  width: 40%;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .thread-content {
@@ -58,7 +58,7 @@ nav ul li a:hover {
 
 .Load_button {
   background-color: rgb(167, 203, 243);
-  border: 1px solid #294272;
+  border: none;
   border-radius: 100px;
   width: 200px;
   padding: 15px;
@@ -67,7 +67,9 @@ nav ul li a:hover {
   text-align: center;
   margin: 10px 0;
 }
-
+.Load_button:hover {
+  background-color: rgb(98, 162, 235);
+}
 .logo {
   font-size: 28px;
 }
