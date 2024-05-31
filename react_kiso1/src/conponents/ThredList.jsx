@@ -39,7 +39,8 @@ function ThreadList() {
         <div key={thread.id} className="thread">
           <div className="thread-content">
             <h2>{thread.title}</h2>
-            <p>{thread.content}</p>
+            <p>{thread.id}</p>
+            <button className="Reply_button">返信を見る</button>
           </div>
         </div>
       ))}
