@@ -1,4 +1,4 @@
-.container {
+div h1 {
   text-align: center;
 }
 
@@ -50,13 +50,25 @@ nav ul li a:hover {
   width: 40%;
   margin: 0 auto;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
 }
 
 .thread-content {
   /* スレッドの内容に関するスタイル */
   color: rgb(71, 85, 97);
+  text-align: center;
+  width: 100%;
 }
-
+.Reply_button {
+  background-color: rgb(228, 228, 228);
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
 .Load_button {
   background-color: rgb(167, 203, 243);
   border: none;
