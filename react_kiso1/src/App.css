@@ -78,7 +78,8 @@ nav ul li a:hover {
   box-sizing: border-box;
   text-decoration: none;
   text-align: center;
-  margin: 10px 0;
+  margin: 20px auto;
+  display: block;
 }
 .Load_button:hover {
   background-color: rgb(98, 162, 235);
