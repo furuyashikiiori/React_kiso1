@@ -87,3 +87,7 @@ nav ul li a:hover {
 .logo {
   font-size: 28px;
 }
+
+.loading_text {
+  text-align: center;
+}

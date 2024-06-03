@@ -44,7 +44,7 @@ function ThreadList() {
           </div>
         </div>
       ))}
-      {loading && <p>Loading...</p>}
+      <div className="loading_text">{loading && <p>Loading...</p>}</div>
       {hasMore && !loading && (
         <button className="Load_button" onClick={loadMore}>
           さらに見る ↓
