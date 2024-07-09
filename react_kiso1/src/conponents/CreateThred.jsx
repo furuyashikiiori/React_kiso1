@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function CreateThread() {
   const [title, setTitle] = useState("");
@@ -34,6 +35,9 @@ function CreateThread() {
         <button type="submit">作成する</button>
       </form>
       <p>{message}</p>
+      <button>
+        <Link to="/">ホームに戻る↩︎</Link>
+      </button>
     </div>
   );
 }
