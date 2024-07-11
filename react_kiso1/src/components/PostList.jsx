@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function PostList() {
   const [posts, setPosts] = useState([]);
@@ -10,6 +11,31 @@ function PostList() {
   const [error, setError] = useState(null);
   const [initialFetchDone, setInitialFetchDone] = useState(false);
   const { threadId } = useParams();
+
+  const [newpost, setNewPost] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleInputChange = (event) => {
+    setNewPost(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      await axios.post(
+        `https://railway.bulletinboard.techtrain.dev/threads/${threadId}/posts`,
+        {
+          post: newpost,
+        }
+      );
+      setMessage("投稿が作成されました！");
+      setNewPost("");
+      window.location.reload();
+    } catch (error) {
+      setMessage("エラーが発生しました。もう一度お試しください。");
+    }
+  };
 
   const fetchPosts = useCallback(async () => {
     if (loading || !hasMore) return;
@@ -83,6 +109,17 @@ function PostList() {
       <Link to={"/"}>
         <button className="To_home_button">ホームに戻る↩︎</button>
       </Link>
+      <div className="CreatePost_body">
+        <h2>新しい投稿を作成する</h2>
+        <form onSubmit={handleSubmit}>
+          <label>
+            投稿のタイトル：
+            <input type="text" value={newpost} onChange={handleInputChange} />
+          </label>
+          <button type="submit">作成する</button>
+        </form>
+        <p>{message}</p>
+      </div>
     </div>
   );
 }
