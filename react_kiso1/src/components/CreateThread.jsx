@@ -25,7 +25,7 @@ function CreateThread() {
   };
 
   return (
-    <div>
+    <div className="CreateThread_body">
       <h2>新しいスレッドを作成する</h2>
       <form onSubmit={handleSubmit}>
         <label>
@@ -35,9 +35,9 @@ function CreateThread() {
         <button type="submit">作成する</button>
       </form>
       <p>{message}</p>
-      <button>
-        <Link to="/">ホームに戻る↩︎</Link>
-      </button>
+      <Link to={"/"}>
+        <button className="to_home_button">ホームに戻る↩︎</button>
+      </Link>
     </div>
   );
 }
