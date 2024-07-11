@@ -3,11 +3,11 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 function CreatePost() {
-  const [post, setPost] = useState("");
+  const [newpost, setNewPost] = useState("");
   const [message, setMessage] = useState("");
 
   const handleInputChange = (event) => {
-    setTitle(event.target.value);
+    setNewPost(event.target.value);
   };
 
   const handleSubmit = async (event) => {
@@ -33,7 +33,7 @@ function CreatePost() {
       <form onSubmit={handleSubmit}>
         <label>
           スレッドのタイトル：
-          <input type="text" value={post} onChange={handleInputChange} />
+          <input type="text" value={newpost} onChange={handleInputChange} />
         </label>
         <button type="submit">作成する</button>
       </form>
