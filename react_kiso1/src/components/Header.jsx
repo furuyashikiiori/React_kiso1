@@ -15,9 +15,9 @@ const Header = () => {
           <li>
             <Link to="/threads/new">スレッド作成</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/threads/:thread_id">投稿作成</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

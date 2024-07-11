@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function ThreadList() {
   const [threads, setThreads] = useState([]);
@@ -33,14 +34,16 @@ function ThreadList() {
   };
 
   return (
-    <div>
+    <div className="ThreadList_body">
       <h1>新着スレッド</h1>
       {threads.map((thread) => (
         <div key={thread.id} className="thread">
           <div className="thread-content">
             <h2>{thread.title}</h2>
-            <p>{thread.id}</p>
-            <button className="Reply_button">返信を見る</button>
+            {/* <p>{thread.id}</p> */}
+            <Link to={`/threads/${thread.id}`}>
+              <button className="Reply_button">返信を見る</button>
+            </Link>
           </div>
         </div>
       ))}

@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ThreadList from "./conponents/ThredList.jsx";
-import Header from "./conponents/Header.jsx";
-import CreateThread from "./conponents/CreateThred.jsx";
-import PostList from "./conponents/PostList.jsx";
+import ThreadList from "./components/ThreadList.jsx";
+import Header from "./components/Header.jsx";
+import CreateThread from "./components/CreateThread.jsx";
+import PostList from "./components/PostList.jsx";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ThreadList />} />
           <Route path="/threads/new" element={<CreateThread />} />
-          <Route path="/threads/:thread_id" element={<PostList />} />
+          <Route path="/threads/:threadId" element={<PostList />} />
         </Routes>
       </div>
     </Router>
