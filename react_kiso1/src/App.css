@@ -3,6 +3,7 @@ div h1 {
 }
 
 header {
+  position: fixed; /*← fixedで固定 */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -41,6 +42,9 @@ nav ul li a:hover {
   color: #003142;
 }
 
+.ThreadList_body {
+  padding-top: 90px;
+}
 .thread {
   /* スレッドのスタイル */
   border-radius: 10px;
@@ -90,4 +94,37 @@ nav ul li a:hover {
 
 .loading_text {
   text-align: center;
+}
+
+/* 新規スレッド作成 */
+.CreateThread_body {
+  padding-top: 90px;
+}
+
+/* スレッドの投稿に関するcss */
+
+.PostList_body {
+  padding-top: 90px;
+  background-color: rgb(205, 246, 246);
+  text-align: center;
+}
+
+.PostList_post {
+  background-color: aquamarine;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+  padding: 3px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.To_home_button {
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 20px;
 }
