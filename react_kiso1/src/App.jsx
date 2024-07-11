@@ -15,6 +15,7 @@ function App() {
           <Route path="/" element={<ThreadList />} />
           <Route path="/threads/new" element={<CreateThread />} />
           <Route path="/threads/:threadId" element={<PostList />} />
+          <Route path="/threads" />
         </Routes>
       </div>
     </Router>
