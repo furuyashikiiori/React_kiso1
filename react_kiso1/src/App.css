@@ -120,7 +120,7 @@ nav ul li a:hover {
 }
 
 .PostList_post {
-  background-color: aquamarine;
+  background-color: rgb(250, 250, 250);
   border-radius: 10px;
   border: 1px solid #ccc;
   margin-bottom: 30px;
@@ -137,9 +137,15 @@ nav ul li a:hover {
   padding-left: 15px;
   padding-right: 15px;
   margin: 20px;
+  background-color: rgb(176, 207, 241);
+  border: none;
 }
 
-/* .CreatePostForm input {
-  height: 80px;
-  width: 20%;
-} */
+.PostList_threadtitle {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgb(0, 84, 194); /* Change the text color to red */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 5px;
+}
