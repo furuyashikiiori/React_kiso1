@@ -111,9 +111,9 @@ function PostList() {
       </Link>
       <div className="CreatePost_body">
         <h2>新しい投稿を作成する</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="CreatePostForm">
           <label>
-            投稿のタイトル：
+            投稿の内容：
             <input type="text" value={newpost} onChange={handleInputChange} />
           </label>
           <button type="submit">作成する</button>
