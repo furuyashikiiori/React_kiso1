@@ -101,6 +101,13 @@ nav ul li a:hover {
 /* 新規スレッド作成 */
 .CreateThread_body {
   padding-top: 90px;
+  text-align: center;
+}
+.CreateThread_body form {
+  margin-top: 50px;
+}
+.CreateThread_body button {
+  margin-top: 50px;
 }
 
 /* スレッドの投稿に関するcss */
