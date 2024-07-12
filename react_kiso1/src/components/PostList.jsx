@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -11,6 +11,8 @@ function PostList() {
   const [error, setError] = useState(null);
   const [initialFetchDone, setInitialFetchDone] = useState(false);
   const { threadId } = useParams();
+  const location = useLocation();
+  const threadTitle = location.state?.title || "スレッド";
 
   const [newpost, setNewPost] = useState("");
   const [message, setMessage] = useState("");
@@ -90,7 +92,9 @@ function PostList() {
 
   return (
     <div className="PostList_body">
-      <h1>スレッド返信</h1>
+      <h1 className="PostList_threadtitle">{threadTitle}</h1>{" "}
+      {/* ここにタイトルを表示 */}
+      <h2>スレッド投稿一覧 ⇩</h2>
       {initialFetchDone && posts.length === 0 ? (
         <p>投稿がありません</p>
       ) : (

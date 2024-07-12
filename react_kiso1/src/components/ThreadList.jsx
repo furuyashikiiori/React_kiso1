@@ -40,8 +40,7 @@ function ThreadList() {
         <div key={thread.id} className="thread">
           <div className="thread-content">
             <h2>{thread.title}</h2>
-            {/* <p>{thread.id}</p> */}
-            <Link to={`/threads/${thread.id}`}>
+            <Link to={`/threads/${thread.id}`} state={{ title: thread.title }}>
               <button className="Reply_button">返信を見る</button>
             </Link>
           </div>
