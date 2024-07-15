@@ -16,6 +16,7 @@ function CreateThread() {
     try {
       await axios.post("https://railway.bulletinboard.techtrain.dev/threads", {
         title: title,
+        //書き直し可能 title,
       });
       setMessage("スレッドが作成されました！");
       setTitle("");
